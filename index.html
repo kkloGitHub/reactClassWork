@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+        name="description"
+        content="提供香港、澳門、海南、台灣旅遊指南與在地服務，聚焦風帆比賽、祭祀神廟、龍舟比賽等主題旅遊。"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="港澳瓊台旅 | 首頁" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_HK" />
+    <meta
+        property="og:description"
+        content="提供香港、澳門、海南、台灣旅遊指南與在地服務，聚焦風帆比賽、祭祀神廟、龍舟比賽等主題旅遊。"
+    />
+    <meta property="og:url" content="https://example.com/" />
+    <link rel="icon" href="./images/favicon.png" type="image/png+xml" />
+    <title>港澳瓊台旅 | 首頁</title>
+
+    <!-- 引入 Google Fonts：霞鹜文楷 TC + Noto Sans TC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    />
+
+    <!-- 引入外部 CSS 檔案 -->
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <header>
+        <nav class="main-navigation" aria-label="主導覽">
+            <!-- 第一行：品牌名稱（手機版置中） -->
+            <div class="nav-brand-name-container">
+                <span class="brand-name">港澳瓊台旅</span>
+            </div>
+
+            <!-- 第二行：Logo 靠左 + 搜尋框靠右（手機版同一行） -->
+            <div class="nav-row">
+                <div class="logo-container">
+                    <a href="/" aria-label="港澳瓊台旅首頁">
+                        <img
+                            src="./images/logo1.png"
+                            alt="港澳瓊台旅品牌 Logo"
+                            width="40"
+                            height="40"
+                            decoding="async"
+                            loading="eager"
+                        />
+                    </a>
+                </div>
+
+                <div class="nav-search-container">
+                    <form>
+
+                    <!-- 
+                    <form role="search" action="/search" method="get"> 搜尋功能開發中並停用-->
+                        <label for="search-input" class="visually-hidden">搜尋</label>
+                        <input
+                            type="search"
+                            id="search-input"
+                            name="q"
+                            placeholder="搜尋..."
+                            autocomplete="off"
+                            enterkeyhint="search"
+                        />
+                        <button type="submit">搜尋</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="layout">
+        <aside aria-label="地區導航">
+            <nav>
+                <ul>
+                    <!-- 香港 -->
+                    <li>
+                        <button
+                            type="button"
+                            class="region-btn"
+                            aria-expanded="false"
+                            aria-controls="hong-kong-submenu"
+                        >
+                            香港
+                        </button>
+                        <ul id="hong-kong-submenu" class="submenu" hidden>
+                            <li>
+                                <button
+                                    type="button"
+                                    class="page-btn"
+                                    data-page="./hongkong.html"
+                                    aria-label="香港觀音廟"
+                                >
+                                    觀音廟
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- 澳門 -->
+                    <li>
+                        <button
+                            type="button"
+                            class="region-btn"
+                            aria-expanded="false"
+                            aria-controls="macau-submenu"
+                        >
+                            澳門
+                        </button>
+                        <ul id="macau-submenu" class="submenu" hidden>
+                            <li>
+                                <button
+                                    type="button"
+                                    class="page-btn"
+                                    data-page="./macau.html"
+                                    aria-label="澳門觀音堂"
+                                >
+                                    觀音堂
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- 海南島 -->
+                    <li>
+                        <button
+                            type="button"
+                            class="region-btn"
+                            aria-expanded="false"
+                            aria-controls="hainan-submenu"
+                        >
+                            海南島
+                        </button>
+                        <ul id="hainan-submenu" class="submenu" hidden>
+                            <li>
+                                <button
+                                    type="button"
+                                    class="page-btn"
+                                    data-page="./hainan.html"
+                                    aria-label="海南島南海觀音"
+                                >
+                                    南海觀音
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- 台灣 -->
+                    <li>
+                        <button
+                            type="button"
+                            class="region-btn"
+                            aria-expanded="false"
+                            aria-controls="taiwan-submenu"
+                        >
+                            台灣
+                        </button>
+                        <ul id="taiwan-submenu" class="submenu" hidden>
+                            <li>
+                                <button
+                                    type="button"
+                                    class="page-btn"
+                                    data-page="./taiwan.html"
+                                    aria-label="台灣大甲鎮瀾宮"
+                                >
+                                    大甲鎮瀾宮
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- 關於我們 -->
+                    <li>
+                        <button
+                            type="button"
+                            class="about-btn page-btn"
+                            data-page="./about.html"
+                            aria-label="關於我們"
+                        >
+                            關於我們
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="main-content" tabindex="-1" aria-live="polite">
+            <section aria-labelledby="main-heading">
+                <h1 id="main-heading">歡迎來到港澳瓊台旅資訊平台</h1>
+                <p>
+                    這裡彙整香港、澳門、海南與台灣的旅遊指南與在地服務，
+                    涵蓋風帆比賽、祭祀神廟、龍舟比賽等主題旅遊資訊。
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 港澳瓊台旅. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const mainContent = document.getElementById("main-content");
+            const pageButtons = document.querySelectorAll(
+                ".page-btn[data-page]"
+            );
+            const defaultTitle = document.title;
+
+            /* =========================================
+               一、側邊欄地區按鈕：展開 / 收合子選單
+               ========================================= */
+            const regionButtons = document.querySelectorAll(
+                ".region-btn[aria-controls]"
+            );
+
+            function closeAllSubmenus(exceptBtn) {
+                regionButtons.forEach(function (btn) {
+                    if (btn === exceptBtn) return;
+                    const submenu = document.getElementById(
+                        btn.getAttribute("aria-controls")
+                    );
+                    btn.setAttribute("aria-expanded", "false");
+                    if (submenu) submenu.hidden = true;
+                });
+            }
+
+            regionButtons.forEach(function (btn) {
+                btn.addEventListener("click", function (e) {
+                    e.stopPropagation();
+
+                    const submenu = document.getElementById(
+                        btn.getAttribute("aria-controls")
+                    );
+                    if (!submenu) return;
+
+                    const isExpanded =
+                        btn.getAttribute("aria-expanded") === "true";
+
+                    closeAllSubmenus(btn);
+
+                    btn.setAttribute("aria-expanded", String(!isExpanded));
+                    submenu.hidden = isExpanded;
+                });
+            });
+
+            // 點擊外部關閉所有子選單
+            document.addEventListener("click", function (e) {
+                if (!e.target.closest(".region-btn")) {
+                    closeAllSubmenus(null);
+                }
+            });
+
+            // Escape 關閉所有子選單
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") {
+                    closeAllSubmenus(null);
+                }
+            });
+
+            /* =========================================
+               二、頁面按鈕：載入對應 HTML 至 main
+               ========================================= */
+            let currentPage = null;
+
+            function loadPage(pageUrl, btn) {
+                if (pageUrl === currentPage) return;
+
+                fetch(pageUrl)
+                    .then(function (response) {
+                        if (!response.ok) {
+                            throw new Error("載入失敗：" + response.status);
+                        }
+                        return response.text();
+                    })
+                    .then(function (html) {
+                        mainContent.innerHTML = html;
+                        currentPage = pageUrl;
+
+                        // 更新按鈕選取狀態
+                        pageButtons.forEach(function (b) {
+                            b.classList.toggle("is-active", b === btn);
+                        });
+
+                        // 更新頁面標題（若 fragment 有 data-page-title）
+                        const titleEl = mainContent.querySelector(
+                            "[data-page-title]"
+                        );
+                        if (titleEl && titleEl.dataset.pageTitle) {
+                            document.title =
+                                titleEl.dataset.pageTitle +
+                                " | 港澳瓊台旅";
+                        } else {
+                            document.title = defaultTitle;
+                        }
+
+                        // 將焦點移至 main，方便螢幕閱讀器與鍵盤使用者
+                        mainContent.focus({ preventScroll: true });
+                    })
+                    .catch(function (error) {
+                        mainContent.innerHTML =
+                            '<section aria-labelledby="error-heading">' +
+                            '<h2 id="error-heading">載入失敗</h2>' +
+                            "<p>抱歉，無法載入內容，請稍後再試。</p>" +
+                            "</section>";
+                        currentPage = null;
+                        document.title = defaultTitle;
+                        console.error(error);
+                    });
+            }
+
+            pageButtons.forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                    const pageUrl = btn.getAttribute("data-page");
+                    loadPage(pageUrl, btn);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
